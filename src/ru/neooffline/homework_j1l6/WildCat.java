@@ -14,10 +14,11 @@ public class WildCat extends Cat implements FindFood {
 
     WildCat(String name) {
         super(name);
+        this.type = "кот";
     }
 
     @Override
-    public void findFood(int searchArea) {
+    public void findFood(double searchArea) {
         System.out.println("У дикого кота по кличке \""+ name +"\" область поиска составляет " + currentSearchArea +"км.");
         System.out.println(name + (currentSearchArea>=searchArea?" найдет":" не найдет") +
                 " еду в области "+ searchArea+"км.");
